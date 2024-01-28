@@ -1,0 +1,15 @@
+{
+  "name": "complete-backend",
+  "version": "1.0.0",
+  "description": "a project which majorly focuses on backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascipt",
+    "backend"
+  ],
+  "author": "Yash Sinha",
+  "license": "ISC"
+}
