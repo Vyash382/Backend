@@ -1,6 +1,4 @@
-import express from "express";
-import { DB_NAME } from "./constants.js";
-import mongoose from "mongoose";
+
 import connectDB from "./db/index.js";
 import dotenv from 'dotenv'
 import app from './app.js'
