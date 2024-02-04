@@ -1,6 +1,7 @@
 import { Router } from "express";
-import { loginUser, registerUser } from "../controllers/user.controller.js";
-import { upload } from "../middlewares/multur.model.js";;
+import { loginUser, logoutUser, registerUser } from "../controllers/user.controller.js";
+import { upload } from "../middlewares/multur.model.js";import { verifyJWT } from "../middlewares/auth.middleware.js";
+;
 const router = Router()
 router.route("/register").post(
     upload.fields([
@@ -14,5 +15,7 @@ router.route("/register").post(
         }
     ])
     ,registerUser)
-router.route("/login").post(loginUser)    
+router.route("/login").post(loginUser);
+//secured route
+router.route("/logout").get(verifyJWT,logoutUser)
 export default router;
